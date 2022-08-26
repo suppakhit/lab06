@@ -1,9 +1,11 @@
-name: Bug Fix in Release branch
+name: Merge Feature Branch
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
-      - release*
+      - develop
 
 jobs:
   unittest:
